@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   colors.h                                           :+:      :+:    :+:   */
+/*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oishchen <oishchen@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 19:50:07 by oishchen          #+#    #+#             */
-/*   Updated: 2025/12/28 19:44:56 by oishchen         ###   ########.fr       */
+/*   Created: 2025/12/28 17:34:34 by oishchen          #+#    #+#             */
+/*   Updated: 2025/12/28 21:58:53 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COLORS_H
-#define COLORS_H
-#include <iostream>
+#include "contact.hpp"
+#include "colors.h"
 
-#define RESET "\033[0m"
-#define BOLD "\033[1m"
-#define ITALIC "\033[3m"
-#define BLACK "\033[30m"
-#define RED "\033[31m"
-#define GREEN "\033[32m"
-#define YELLOW "\033[33m"
-#define BLUE "\033[34m"
-#define MAGNETA "\033[35m"
-#define CYAN "\033[36m"
-#define WHITE "\033[37m"
-
-#endif
+void Contact::print_by_idx()
+{
+    std::cout << "--------------------------------------\n";
+    std::cout << MAGNETA "CONTACT:\n" RESET;
+    std::cout << ITALIC "first name: " RESET << _first_name << "\n";
+    std::cout << ITALIC "last name: " RESET << _last_name << "\n";
+    std::cout << ITALIC "nick name: " RESET << _nickname << "\n";
+}
