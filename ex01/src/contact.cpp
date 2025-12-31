@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/28 17:34:34 by oishchen          #+#    #+#             */
-/*   Updated: 2025/12/31 14:18:00 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/12/31 15:07:54 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void Contact::print_by_idx()
 {
     std::cout << "--------------------------------------\n";
-    std::cout << MAGNETA "CONTACT:" RESET << "\n";
+    std::cout << MAGENTA "CONTACT:" RESET << "\n";
     std::cout << ITALIC "first name: " RESET << _first_name << "\n";
     std::cout << ITALIC "last name: " RESET << _last_name << "\n";
     std::cout << ITALIC "nick name: " RESET << _nickname << "\n";
@@ -38,7 +38,7 @@ bool is_alpha(const std::string &str)
 bool Contact::set_fn(const std::string &f_name)
 {
     if (f_name.empty() || !is_alpha(f_name))
-        return (false);
+        return (setter_msg("The first name consists only of letters: "));
     _first_name = f_name;
     return (true);
 }
@@ -67,7 +67,7 @@ bool Contact::set_phone_nb(const std::string &phone)
     while (i < phone.length())
     {
         if (!std::isdigit(phone[i]))
-            return (setter_msg("The phone should be a digits from 0 to 9, + at the start is allowed"));
+            return (setter_msg("The nb must consist of digits, + at the beginning is allowed"));
         i++;
     }
     _phone_nb = phone;
@@ -109,6 +109,6 @@ Contact::~Contact()
 
 bool Contact::setter_msg(const std::string &msg)
 {
-    std::cerr << msg << "\n";
+    std::cout << BOLD MAGENTA<< "Error: \"" << msg << "\"" << RESET << "\n";
     return (false);
 }

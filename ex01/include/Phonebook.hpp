@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 21:42:28 by oishchen          #+#    #+#             */
-/*   Updated: 2025/12/31 14:15:04 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/12/31 14:39:25 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,10 @@ private:
     Contact _contacts[MAX_CONTACT];
     size_t  _index;
     size_t  _nb_contacts;
-    void check_input(const std::string &prompt, bool (Contact::*set_funct)(const std::string &),
-        Contact *contact);
+    void    check_input(const std::string &prompt, 
+            bool (Contact::*set_funct)(const std::string &), Contact *contact);
     void    print_by_idx();
+    void    print_search(const std::string &text);
 public:
     Phonebook();
     ~Phonebook();

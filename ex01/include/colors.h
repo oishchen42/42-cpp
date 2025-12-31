@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 19:50:07 by oishchen          #+#    #+#             */
-/*   Updated: 2025/12/31 14:12:02 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/12/31 14:45:30 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 #define GREEN "\033[32m"
 #define YELLOW "\033[33m"
 #define BLUE "\033[34m"
-#define MAGNETA "\033[35m"
+#define MAGENTA "\033[35m"
 #define CYAN "\033[36m"
 #define WHITE "\033[37m"
 

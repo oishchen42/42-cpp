@@ -6,7 +6,7 @@
 #    By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/22 18:31:30 by oishchen          #+#    #+#              #
-#    Updated: 2025/12/31 14:16:17 by oishchen         ###   ########.fr        #
+#    Updated: 2025/12/31 15:39:22 by oishchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,9 +55,5 @@ re: fclean all
 # Decor
 GREEN = \033[0;32m
 RED = \033[0;31m
-YELLOW = \033[0;33m
-ITALIC_LIGHT_YELLOW = \033[3;93m
-CYAN = \033[0;36m
 NEW = \033[0m
 BLUE = \033[94m
-CLEAR_LINE = \033[2K\r
