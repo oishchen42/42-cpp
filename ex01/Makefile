@@ -6,17 +6,17 @@
 #    By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/12/22 18:31:30 by oishchen          #+#    #+#              #
-#    Updated: 2025/12/23 00:33:45 by oishchen         ###   ########.fr        #
+#    Updated: 2025/12/31 14:16:17 by oishchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := megaphone
+NAME := phonebook
 CXX := c++
 CXXFLAGS := -Wall -Werror -Wextra -std=c++17
 INCLUDE := include
 
 SRC_DIR := src
-SRC_FILES := main.cpp
+SRC_FILES := main.cpp contact.cpp phone_book.cpp
 SRC := $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
 OBJ_DIR := obj

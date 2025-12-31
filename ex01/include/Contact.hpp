@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oishchen <oishchen@student.42heilbronn.    +#+  +:+       +#+        */
+/*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/27 17:25:39 by oishchen          #+#    #+#             */
-/*   Updated: 2025/12/28 21:49:53 by oishchen         ###   ########.fr       */
+/*   Updated: 2025/12/31 14:07:58 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,18 @@ private:
 public:
     Contact();
     ~Contact();
-    bool set_fn(std::string f_name);
+    bool        set_fn(const std::string &f_name);
     std::string get_fn();
-    bool set_ln(std::string l_name);
+    bool        set_ln(const std::string &l_name);
     std::string get_ln();
-    bool set_nick(std::string nick);
+    bool        set_nick(const std::string &nick);
     std::string get_nick();
-    bool set_phone_nb(std::string phone);
+    bool        set_phone_nb(const std::string &phone);
     std::string get_phone_nb();
-    bool set_secret(std::string secret);
+    bool        set_secret(const std::string &secret);
     std::string get_secret();
-    void print_by_idx();
+    void        print_by_idx();
+    bool        setter_msg(const std::string &msg);
 };
 
 #endif
