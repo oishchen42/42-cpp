@@ -3,34 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
+/*   By: oishchen <oishchen@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 15:04:04 by oishchen          #+#    #+#             */
-/*   Updated: 2025/10/17 17:04:19 by oishchen         ###   ########.fr       */
+/*   Created: 2026/01/03 11:53:05 by oishchen          #+#    #+#             */
+/*   Updated: 2026/01/03 16:25:58 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
+#include "Zombie.h"
 
-int main(int ac, char **av)
+int main()
 {
-	int				i {0};
-	unsigned int	j;
-
-	if (ac == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
-		return (0);
-	}
-	while (++i < ac)
-	{
-		j = -1;
-		std::string str = av[i];
-		while (++j < str.length())
-			str[j] = std::toupper(str[j]);
-		std::cout << str;
-		if (i == ac - 1)
-			std::cout << std::endl;
-	}
-	return (0);
+    int N = 10;
+    Zombie *hrd = zombieHorde(N, "V");
+    Zombie *zmb = newZombie("Alpha");
+    zmb->announce();
+    randomChump("Omega");
+    for(int i = 0; i < N; i++)
+    {
+        hrd[i].announce();
+    }
+    delete [] hrd;
+    delete(zmb);
+    return (0);
 }

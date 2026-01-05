@@ -6,7 +6,7 @@
 /*   By: oishchen <oishchen@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/03 11:37:29 by oishchen          #+#    #+#             */
-/*   Updated: 2026/01/03 14:24:43 by oishchen         ###   ########.fr       */
+/*   Updated: 2026/01/03 15:23:42 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ class Zombie
 private:
     std::string _name;
 public:
-    Zombie(void);
     Zombie(std::string name);
+    Zombie(void);
     ~Zombie();
     void announce();
+    void setName(std::string name);
 };
-
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );

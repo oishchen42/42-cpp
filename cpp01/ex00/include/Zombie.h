@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oishchen <oishchen@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/03 11:37:29 by oishchen          #+#    #+#             */
-/*   Updated: 2026/01/03 14:24:43 by oishchen         ###   ########.fr       */
+/*   Created: 2026/01/03 14:25:46 by oishchen          #+#    #+#             */
+/*   Updated: 2026/01/03 14:27:17 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef ZOMBIE_H
+#define ZOMBIE_H
 
 #include <iostream>
-
-class Zombie
-{
-private:
-    std::string _name;
-public:
-    Zombie(void);
-    Zombie(std::string name);
-    ~Zombie();
-    void announce();
-};
+#include "Zombie.hpp"
 
 Zombie* newZombie( std::string name );
 void randomChump( std::string name );
+
+#endif
