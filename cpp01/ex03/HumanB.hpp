@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/04 23:30:48 by oishchen          #+#    #+#             */
-/*   Updated: 2026/01/05 14:29:32 by oishchen         ###   ########.fr       */
+/*   Created: 2026/01/05 14:01:32 by oishchen          #+#    #+#             */
+/*   Updated: 2026/01/05 14:30:40 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include "Weapon.hpp"
 
-class Weapon{
+class HumanB{
 private:
-    std::string type;
+    Weapon *weapon;
+    std::string _name;
+
 public:
-    Weapon(const std::string &type);
-    ~Weapon();
-    const   std::string &get_type(void) const;
-    void    setType(const std::string &new_type);
+    HumanB(const std::string &name);
+    ~HumanB();
+    void attack();
+    void setWeapon(Weapon &weapon);
 };

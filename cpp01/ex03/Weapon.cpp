@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oishchen <oishchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/04 23:30:48 by oishchen          #+#    #+#             */
-/*   Updated: 2026/01/05 14:29:32 by oishchen         ###   ########.fr       */
+/*   Created: 2026/01/05 13:05:55 by oishchen          #+#    #+#             */
+/*   Updated: 2026/01/05 14:29:37 by oishchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Weapon.hpp"
 
-#include <iostream>
+Weapon::Weapon(const std::string &type) { this->type = type; }
 
-class Weapon{
-private:
-    std::string type;
-public:
-    Weapon(const std::string &type);
-    ~Weapon();
-    const   std::string &get_type(void) const;
-    void    setType(const std::string &new_type);
-};
+Weapon::~Weapon(void) { }
+
+const std::string &Weapon::get_type() const { return (this->type); }
+
+void Weapon::setType(const std::string &type) { this->type = type; }

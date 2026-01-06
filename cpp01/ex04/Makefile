@@ -1,9 +1,9 @@
-NAME := weapon
+NAME := filename
 
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++17
 
-SRC := main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC := main.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)
